@@ -1,0 +1,44 @@
+# Node modules
+node_modules/
+
+# Bun lock files
+bun.lock
+bun.lock.json
+
+# Expo/React Native
+.expo/
+.expo-shared/
+dist/
+build/
+web-build/
+
+# macOS
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+Thumbs.db
+
+# Misc
+.env
+.env.*
+
+# VSCode
+.vscode/
+
+# TypeScript
+*.tsbuildinfo
+
+# Metro
+.cache/
+
+# Others
+coverage/
+.idea/
+
+# Ignore Expo generated assets
+assets/splash-icon.png

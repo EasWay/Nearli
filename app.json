@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Nearli",
+    "slug": "nearli",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/icon.png"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.local.nearli"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png"
+      },
+      "package": "com.local.nearli"
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "http://localhost"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": "http://localhost"
+      },
+      "eas": {
+        "projectId": "0dca0e56-4959-4919-98ae-ee34881bbeff"
+      }
+    },
+    "owner": "strange_r"
+  }
+}
