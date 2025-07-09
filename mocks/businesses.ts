@@ -35,7 +35,7 @@ export const businesses: Business[] = [
         id: 'r1',
         userId: 'u1',
         userName: 'Ama Asante',
-        userAvatar: require('../assets/images/14.jpeg'),
+        userAvatar: require('../assets/images/703637798.jpg'),
         rating: 5,
         comment: "Best Fufu in Osu! The local soup is amazing and the staff is very friendly.",
         date: '2023-05-15'
@@ -135,7 +135,7 @@ export const businesses: Business[] = [
         id: 'r5',
         userId: 'u5',
         userName: 'Nana Adjei',
-        userAvatar: require('../assets/images/703637798.png'),
+        userAvatar: require('../assets/images/703637798.jpg'),
         rating: 5,
         comment: "The jollof rice here is the best in Accra! Mama Fati knows how to cook traditional food.",
         date: '2023-06-15'
@@ -215,7 +215,7 @@ export const businesses: Business[] = [
     currency: 'GHS',
     images: [
       require('@/assets/images/maxresdefault.jpg'),
-      require('@/assets/images/703637798.png'),
+      require('@/assets/images/703637798.jpg'),
       require('@/assets/images/IMG-20231228-WA0035.jpg')
     ],
     latitude: 5.6108,
