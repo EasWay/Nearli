@@ -76,11 +76,11 @@ export const BusinessCard = ({ business, compact = false }: BusinessCardProps) =
     },
     favoriteButton: {
       position: 'absolute',
-      top: 12,
-      right: 12,
+      top: 8,
+      right: 8,
       backgroundColor: 'rgba(0,0,0,0.3)',
-      borderRadius: 20,
-      padding: 8,
+      borderRadius: 24,
+      padding: 12,
     },
     content: {
       padding: 12,
@@ -157,7 +157,6 @@ export const BusinessCard = ({ business, compact = false }: BusinessCardProps) =
       <TouchableOpacity
         style={styles.favoriteButton}
         onPress={toggleFavorite}
-        hitSlop={{ top: 10, right: 10, bottom: 10, left: 10 }}
       >
         <Heart
           size={22}

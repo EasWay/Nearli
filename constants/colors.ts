@@ -1,5 +1,6 @@
 // Import useTheme for the hook below
 import { useTheme } from '@/hooks/use-theme-store';
+import { Platform } from 'react-native';
 
 export const lightColors = {
   primary: '#6CB4EE',
@@ -44,6 +45,10 @@ export const shadows = {
     shadowOpacity: 0.1,
     shadowRadius: 2,
     elevation: 2,
+    // For web compatibility
+    ...(Platform?.OS === 'web' && {
+      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.1)',
+    }),
   },
   medium: {
     shadowColor: '#000',
@@ -51,6 +56,10 @@ export const shadows = {
     shadowOpacity: 0.15,
     shadowRadius: 3.84,
     elevation: 5,
+    // For web compatibility
+    ...(Platform?.OS === 'web' && {
+      boxShadow: '0 2px 3.84px rgba(0, 0, 0, 0.15)',
+    }),
   },
   large: {
     shadowColor: '#000',
@@ -58,6 +67,10 @@ export const shadows = {
     shadowOpacity: 0.2,
     shadowRadius: 5.46,
     elevation: 9,
+    // For web compatibility
+    ...(Platform?.OS === 'web' && {
+      boxShadow: '0 4px 5.46px rgba(0, 0, 0, 0.2)',
+    }),
   },
 };
 

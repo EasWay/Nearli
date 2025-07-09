@@ -34,18 +34,24 @@ export default function DiscoverScreen() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [refreshing, setRefreshing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const location = useLocation();
   const { businesses, loading } = useBusinesses(selectedCategory || undefined, searchQuery);
   
   const [featuredBusinesses, setFeaturedBusinesses] = useState<Business[]>([]);
 
   useEffect(() => {
-    if (businesses.length > 0) {
-      // Get top rated businesses for featured section
-      const featured = [...businesses]
-        .sort((a, b) => b.rating - a.rating)
-        .slice(0, 5);
-      setFeaturedBusinesses(featured);
+    try {
+      if (businesses.length > 0) {
+        // Get top rated businesses for featured section
+        const featured = [...businesses]
+          .sort((a, b) => b.rating - a.rating)
+          .slice(0, 5);
+        setFeaturedBusinesses(featured);
+      }
+    } catch (err) {
+      console.error('Error setting featured businesses:', err);
+      setError('Failed to load featured businesses');
     }
   }, [businesses]);
 
@@ -195,7 +201,32 @@ export default function DiscoverScreen() {
       color: colors.textLight,
       textAlign: 'center',
     },
+    editButton: {
+      paddingVertical: 8,
+      paddingHorizontal: 16,
+      backgroundColor: colors.primary,
+      borderRadius: 20,
+    },
+    editButtonText: {
+      color: colors.white,
+      fontWeight: '500',
+      fontSize: 14,
+    },
   });
+
+  if (error) {
+    return (
+      <View style={[styles.container, { justifyContent: 'center', alignItems: 'center' }]}>
+        <Text style={[styles.emptyStateText, { color: colors.error }]}>{error}</Text>
+        <TouchableOpacity 
+          style={[styles.editButton, { marginTop: 16 }]} 
+          onPress={() => setError(null)}
+        >
+          <Text style={styles.editButtonText}>Retry</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
 
   return (
     <ScrollView

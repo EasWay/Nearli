@@ -16,7 +16,7 @@ import { useLocalSearchParams } from 'expo-router';
 import { businesses } from '@/mocks/businesses';
 import { Business } from '@/types/business';
 import { getColors, shadows } from '@/constants/colors';
-import { useThemeStore } from '@/hooks/use-theme-store';
+import { useTheme } from '@/hooks/use-theme-store';
 import { 
   Heart, 
   Star, 
@@ -40,7 +40,7 @@ function getImageSource(img: any) {
 }
 
 export default function BusinessDetailScreen() {
-  const { theme } = useThemeStore();
+  const { theme } = useTheme();
   const colors = getColors(theme);
   const { id } = useLocalSearchParams<{ id: string }>();
   const [business, setBusiness] = useState<Business | null>(null);

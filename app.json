@@ -13,13 +13,21 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.local.nearli"
+      "bundleIdentifier": "com.local.nearli",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app uses location to show nearby businesses.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app uses location to show nearby businesses."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png"
       },
-      "package": "com.local.nearli"
+      "package": "com.local.nearli",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
     },
     "web": {
       "favicon": "./assets/icon.png"
@@ -30,7 +38,8 @@
         {
           "origin": "http://localhost"
         }
-      ]
+      ],
+      "@react-native-async-storage/async-storage"
     ],
     "experiments": {
       "typedRoutes": true

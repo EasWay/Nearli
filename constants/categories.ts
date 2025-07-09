@@ -5,7 +5,7 @@ export interface Category {
 }
 
 export const categories: Category[] = [
-  { id: 'restaurants', name: 'Restaurants', icon: 'utensils' },
+  { id: 'restaurant', name: 'Restaurants', icon: 'utensils' },
   { id: 'cafes', name: 'Cafes', icon: 'coffee' },
   { id: 'shopping', name: 'Shopping', icon: 'shopping-bag' },
   { id: 'health', name: 'Health', icon: 'heart' },

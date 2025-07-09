@@ -1,7 +1,4 @@
 import { Business } from '@/types/business';
-import business1Img1 from '@/assets/images/chopbar.jpg';
-import business1Img2 from '@/assets/images/electrician.jpg';
-import business1Img3 from '@/assets/images/koko.jpg';
 
 export const businesses: Business[] = [
   {
@@ -17,7 +14,11 @@ export const businesses: Business[] = [
     reviewCount: 128,
     priceLevel: 2,
     currency: 'GHS',
-    images: [business1Img1, business1Img2, business1Img3],
+    images: [
+      require('@/assets/images/chopbar.jpg'),
+      require('@/assets/images/electrician.jpg'),
+      require('@/assets/images/koko.jpg')
+    ],
     latitude: 5.5557,
     longitude: -0.1963,
     hours: [
