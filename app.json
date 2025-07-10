@@ -38,8 +38,7 @@
         {
           "origin": "http://localhost"
         }
-      ],
-      "@react-native-async-storage/async-storage"
+      ]
     ],
     "experiments": {
       "typedRoutes": true
